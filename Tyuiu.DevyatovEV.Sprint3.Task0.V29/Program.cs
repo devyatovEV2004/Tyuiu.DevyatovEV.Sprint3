@@ -34,14 +34,18 @@ namespace Tyuiu.DevyatovEV.Sprint3.Task0.V29
             Console.WriteLine("***************************************************************************");
 
             double t = 0.5;
+            int startValue = 1;
+            int stopValue = 10;
 
             Console.WriteLine($"t = {t}");
+            Console.WriteLine($"Старт шага = {startValue}");
+            Console.WriteLine($"Конец шага = {stopValue}");
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            double result = ds.GetSumSeries(t);
+            double result = ds.GetSumSeries(t, startValue, stopValue);
             Console.WriteLine($"Сумма ряда = {result}");
 
             Console.ReadKey();
