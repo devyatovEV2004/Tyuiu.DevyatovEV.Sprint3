@@ -31,21 +31,20 @@ namespace Tyuiu.DevyatovEV.Sprint3.Task2.V30
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-
-            double x = 0.25;
+            double value = 0.25;
             int startValue = 1;
             int stopValue = 11;
 
-            Console.WriteLine($"x = {x}");
-            Console.WriteLine($"Старт шага = {startValue}");
-            Console.WriteLine($"Конец шага = {stopValue}");
+            Console.WriteLine("Переменная X = " + value);
+            Console.WriteLine("Старт шага = " + startValue);
+            Console.WriteLine("Конец шага = " + stopValue);
+
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            double result = ds.GetMultiplySeries(x, startValue, stopValue);
-            Console.WriteLine($"Произведение ряда = {result}");
+            Console.WriteLine("Произведение ряда = " + ds.GetMultiplySeries(value, startValue, stopValue));
 
             Console.ReadKey();
         }

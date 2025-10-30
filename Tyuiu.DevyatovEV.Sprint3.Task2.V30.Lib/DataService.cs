@@ -11,18 +11,13 @@ namespace Tyuiu.DevyatovEV.Sprint3.Task2.V30.Lib
     {
         public double GetMultiplySeries(double value, int startValue, int stopValue)
         {
-            double multiplySeries = 1;
-            int i = startValue;
-
+            double MultiplySeries = 1;
             do
             {
-                double term = (Math.Pow(value, 2) + i) + 2;
-                multiplySeries *= term;
-                i++;
-            }
-            while (i <= stopValue);
-
-            return Math.Round(multiplySeries, 3);
+                MultiplySeries = MultiplySeries * (((Math.Pow(value, 2)) * startValue) + 2);
+                startValue++;
+            } while (startValue <= stopValue);
+            return Math.Round(MultiplySeries, 3);
         }
     }
 }
