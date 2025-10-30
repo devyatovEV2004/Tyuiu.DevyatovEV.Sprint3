@@ -11,17 +11,16 @@ namespace Tyuiu.DevyatovEV.Sprint3.Task5.V11.Lib
     {
         public double GetSumSumSeries(int x, int startValue1, int startValue2, int stopValue1, int stopValue2)
         {
-            double sumSeries = 0;
-
+            double res = 0;
             for (int i = startValue1; i <= stopValue1; i++)
             {
-                for (int k = startValue2; k <= stopValue2; k++)
+                for (int j = startValue2; j <= stopValue2; j++)
                 {
-                    sumSeries += Math.Sin(k) + (x / 2.0);
+                    res += Math.Sin(j) + Convert.ToDouble(x) / 2;
                 }
             }
+            return Math.Round(res, 3);
 
-            return Math.Round(sumSeries, 3);
         }
     }
 }
