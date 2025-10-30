@@ -1,24 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+// DataService.cs
+using System;
 using tyuiu.cources.programming.interfaces.Sprint3;
 
-namespace Tyuiu.DevyatovEV.Sprint3.Task0.V29.Lib
+namespace Tyuiu.DevyatovEV.Sprint3.Task5.V11.Lib
 {
-    public class DataService : ISprint3Task0V29
+    public class DataService : ISprint3Task5V11
     {
-        public double GetSumSeries(double value, int startValue, int stopValue)
-        {
-            double sumSeries = 0;
+      public double GetSumSumSeries(int x, int startValue1, int startValue2, int stopValue1, int stopValue2)
+{
+    double sum = 0;
 
-            for (int k = startValue; k <= stopValue; k++)
-            {
-                double term = (Math.Pow(value, 2 * k) + (1.0 / (k + 1))) * Math.Cos(value);
-                sumSeries += term;
-            }
-            return Math.Round(sumSeries, 3);
+    for (int i = startValue1; i <= stopValue1; i++)
+    {
+        for (int k = startValue2; k <= stopValue2; k++)
+        {
+            sum += Math.Sin(k);
         }
+    }
+
+    sum += (double)x / 2;
+
+    return Math.Round(sum, 3);
+}
+
     }
 }
