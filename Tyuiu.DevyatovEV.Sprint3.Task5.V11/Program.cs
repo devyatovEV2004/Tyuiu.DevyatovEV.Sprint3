@@ -30,20 +30,24 @@ namespace Tyuiu.DevyatovEV.Sprint3.Task5.V11
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-            Console.Write("Введите переменную x: ");
-            int vaule = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите нижний 1 предел: ");
-            int start = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите нижний 2 предел: ");
-            int start2 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите 1 конечный предел: ");
-            int end = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите 2 конечный предел: ");
-            int end2 = Convert.ToInt32(Console.ReadLine());
+
+            int x = 5;
+            int startValue1 = 1;
+            int stopValue1 = 3;
+            int startValue2 = 1;
+            int stopValue2 = 10;
+
+            Console.WriteLine($"x = {x}");
+            Console.WriteLine($"Внешний цикл: от {startValue1} до {stopValue1}");
+            Console.WriteLine($"Внутренний цикл: от {startValue2} до {stopValue2}");
+
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine(ds.GetSumSumSeries(vaule, start, start2, end, end2));
+
+            double result = ds.GetSumSumSeries(x, startValue1, startValue2, stopValue1, stopValue2);
+            Console.WriteLine($"Сумма двойного ряда = {result}");
+
             Console.ReadKey();
         }
     }
