@@ -16,7 +16,8 @@ namespace Tyuiu.DevyatovEV.Sprint3.Task2.V30.Lib
 
             do
             {
-                multiplySeries *= (Math.Pow(value, 2) + i) + 2;
+                double term = (Math.Pow(value, 2) + i) + 2;
+                multiplySeries *= term;
                 i++;
             }
             while (i <= stopValue);

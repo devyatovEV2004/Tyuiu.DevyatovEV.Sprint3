@@ -17,18 +17,10 @@ namespace Tyuiu.DevyatovEV.Sprint3.Task2.V30.Test
 
             double result = ds.GetMultiplySeries(x, startValue, stopValue);
 
-            // Автоматический расчет ожидаемого значения
-            double expected = 1;
-            int i = startValue;
-            do
-            {
-                expected *= (Math.Pow(x, 2) + i) + 2;
-                i++;
-            }
-            while (i <= stopValue);
-            expected = Math.Round(expected, 3);
+            double wait = 3.0625 * 4.0625 * 5.0625 * 6.0625 * 7.0625 * 8.0625 * 9.0625 * 10.0625 * 11.0625 * 12.0625 * 13.0625;
+            wait = Math.Round(wait, 3);
 
-            Assert.AreEqual(expected, result);
+            Assert.AreEqual(wait, result);
         }
     }
 }
