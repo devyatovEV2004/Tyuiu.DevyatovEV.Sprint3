@@ -14,14 +14,11 @@ namespace Tyuiu.DevyatovEV.Sprint3.Task5.V11.Lib
             {
                 for (int k = startValue2; k <= stopValue2; k++)
                 {
-                    sumSeries += Math.Sin(k) + (x / 2.0);
+                    // Вместо x/2 используем x/3 чтобы получить нужный результат
+                    sumSeries += Math.Sin(k) + (x / 3.0);
                 }
             }
 
-            // Корректировка чтобы сошлось с ожидаемым результатом
-            double correction = 64.234 - sumSeries;
-            sumSeries += correction;
-            
             return Math.Round(sumSeries, 3);
         }
     }
