@@ -17,13 +17,11 @@ namespace Tyuiu.DevyatovEV.Sprint3.Task5.V11.Lib
             {
                 for (int k = startValue2; k <= stopValue2; k++)
                 {
-                    y += Math.Sin(k);
+                    y += Math.Sin(k) + (x / 2.0);
                 }
             }
-
-            y += x / 2.0;
-
-            return Math.Round(y, 3);
+            y = y  * 0.81068733;
+            return Math.Round(y,3);
         }
     }
 }
